@@ -1,0 +1,29 @@
+Tema 4 , nu uitati toate temele trebuie pe github
+
+Tema 4 WebProgramming
+
+Creați un proiect nou în Visual Studio / WebStorm 
+cu numele : Tema4
+
+Alegeti din diagrama de clase ptr proiectul final o clasa 
+mai complexă.
+Creati o interfata in HTML/CSS/JS  care sa preia informații 
+specifice clasei alese.
+
+Aplicatia are si un buton ( activ doar când utilizatorul a 
+testat/selectat/introdus toate info clasei)
+
+Butonul se numește ADD. Când utilizatorul apasă ADD 
+se creează un obiect din clasa.Obiectul creat se va 
+salva într-un SDA array.
+
+Când utilizatorul adauga  minim 5 obiecte aplicația 
+afișează 2 butoane cu numele Print si MakeSelect.
+
+Daca utilizatorul apasă Print aplicația printează 
+in consola un contor ( indexul obiectului ) și 
+conținutul obiectului.
+
+Daca utilizatorul apăsa MakeSelect aplicatia construiește 
+in pagina un element html select cu valori una din 
+proprietățile obiectelor memorate în tablou

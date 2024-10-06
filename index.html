@@ -6,6 +6,90 @@
     <title>Document</title>
 </head>
 <body>
+
+<br><br><br>
+    <label>Introdu minim 5 corpuri: </label>
+    <br><br>
+    <label>Nume corp: </label>
+    <input type="text" id="nume_corp" name="nume_corp">
+    <br><br>
+    <label>Introdu dimensiunile corpului: </label>
+    <br><br>
+    <label>Inaltime: </label>
+    <input type="number" id="inaltime_corp" name="inaltime">
+    <br><br>
+    <label>Latime: </label>
+    <input type="number" id="latime_corp" name="latime">
+    <br><br>
+    <label>Adancime: </label>
+    <input type="number" id="adancime_corp" name="adancime">
+    <br><br>
+    <label>Nr usi: </label>
+    <input type="number" id="nr_usi" name="nr_usi">
+    <br><br>
+    <button id="buton_add" style="font-size: 30px;" onclick="create_obj(), reset_input(), show_buttons(); ">Add</button>
+    <br><br>
+    <button disabled id="buton_print" style="font-size: 30px;" onclick="print_in_console()">Print</button>
+    <br><br>
+    <button disabled id="buton_makeselect" style="font-size: 30px;" onclick="makeselect_in_page()">MakeSelect</button>
+    <br><br>
     
 </body>
+
+<script>
+
+    let proiect=[]
+    let i = 0
+    
+    function show_buttons(){
+        if(proiect.length < 5){
+            document.getElementById("buton_print").disabled = true
+            document.getElementById("buton_makeselect").disabled = true
+        }
+        else{
+            document.getElementById("buton_print").disabled = false
+            document.getElementById("buton_makeselect").disabled = false
+        }
+
+    }
+    function Corp(nume, inaltime, latime, adancime, usi){
+        this.nume_corp = nume;
+        this.inaltime_corp = inaltime;
+        this.latime_corp = latime;
+        this.adancime_corp = adancime;
+        this.nr_usi = usi;
+    }
+    function create_obj(){
+
+        let nume = document.getElementById("nume_corp").value
+        let inaltime = document.getElementById("inaltime_corp").value
+        let latime = document.getElementById("latime_corp").value
+        let adancime = document.getElementById("adancime_corp").value
+        let usi = document.getElementById("nr_usi").value
+        
+        let corp_nou = new Corp(nume, inaltime, latime, adancime, usi);
+        proiect[i] = corp_nou
+        i++
+    }
+
+    function reset_input(){
+        document.getElementById("nume_corp").value = ""
+        document.getElementById("inaltime_corp").value = ""
+        document.getElementById("latime_corp").value = ""
+        document.getElementById("adancime_corp").value = ""
+        document.getElementById("nr_usi").value = ""
+    }
+    
+    function print_in_console(){
+        console.log(proiect)
+    }
+
+    function makeselect_in_page(){
+
+    }
+    
+
+
+
+</script>
 </html>
